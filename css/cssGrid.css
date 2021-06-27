@@ -1,0 +1,73 @@
+h1 {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+.flexContainer {
+    display: flex;
+    background-color: rgb(154, 180, 206);
+    justify-content: center;
+}
+
+.flexContainer > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    width: 33%;
+    text-align: center;
+  }
+
+  .flexContainer > div >image {
+    max-width: 100%;
+}
+  .projectLogo1 {
+      grid-area: logo1;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      text-align: center;
+    }
+  .projectDescription1 {
+      grid-area: description1;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      background-color: rgb(204, 194, 228);
+    }
+  .projectLogo2 {
+      grid-area: logo2;
+      text-align: center;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+    }
+  .projectDescription2 {
+      grid-area: description2;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      background-color: rgb(204, 194, 228);
+    }
+
+  .workGrid {
+    display: grid;
+    grid-template-areas:
+    'logo1 description1'
+    'logo2 description2';
+    grid-gap: 10px;
+    background-color: #92bee2;
+    padding: 10px;
+  }
+
+  @media only screen and (max-wdith:600) {
+    .flexContainer {
+        flex-direction: column;
+      }
+
+    .flexContainer > div {
+        width: 100%;
+    }
+
+    .workGrid {
+        grid-template-areas:
+        'logo1'
+        'description1' 
+        'logo2'
+        'description2'
+    }
+    
+  }
